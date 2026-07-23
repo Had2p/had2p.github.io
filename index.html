@@ -29,17 +29,48 @@
             justify-content: center; 
             gap: 20px; 
         } 
-        .badge-link { 
-            text-decoration: none; 
-            transition: transform 0.2s ease; 
-        } 
-        .badge-link:hover { 
-            transform: scale(1.08) translateY(-2px); 
-        } 
-        .badge-link img { 
-            height: 40px; 
-            border-radius: 4px; 
-        } 
+        
+        /* Custom Replica Badges Built with Unbreakable CSS Layouts */
+        .custom-badge {
+            display: inline-flex;
+            font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+            font-size: 11px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-decoration: none;
+            border-radius: 4px;
+            overflow: hidden;
+            height: 40px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            transition: transform 0.2s ease;
+        }
+        .custom-badge:hover {
+            transform: scale(1.08) translateY(-2px);
+        }
+        
+        /* Dark left-hand block styled like your exact 171A21 choice */
+        .badge-left {
+            background-color: #171A21;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            padding: 0 16px;
+        }
+        
+        /* Lighter right-hand block styled like your exact 2A475E choice */
+        .badge-right {
+            background-color: #2A475E;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            padding: 0 16px;
+        }
+        
+        /* GitHub variant using your same color layout style */
+        .github-right {
+            background-color: #24292e;
+        }
     </style> 
 </head> 
 <body> 
@@ -48,14 +79,16 @@
     <p>Welcome to my stupid website i suck at coding never ask me to code</p> 
 
     <div class="btn-container"> 
-        <!-- Steam Profile Link using your exact custom badge URL configuration --> 
-        <a href="https://steamcommunity.com" target="_blank" class="badge-link"> 
-            <img alt="Static Badge" src="https://shields.io">
+        <!-- Pure CSS Steam Badge with Your Exact Colors Built In --> 
+        <a href="https://steamcommunity.com" target="_blank" class="custom-badge"> 
+            <span class="badge-left">Steam</span>
+            <span class="badge-right">Profile</span>
         </a> 
 
-        <!-- Matching style GitHub Profile Link --> 
-        <a href="https://github.com" target="_blank" class="badge-link"> 
-            <img alt="Static Badge" src="https://shields.io">
+        <!-- Pure CSS GitHub Badge with Matching Split Design --> 
+        <a href="https://github.com" target="_blank" class="custom-badge"> 
+            <span class="badge-left">GitHub</span>
+            <span class="badge-right github-right">Profile</span>
         </a> 
     </div> 
 

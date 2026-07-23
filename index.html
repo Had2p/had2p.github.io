@@ -1,62 +1,75 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Had2p</title>
-    <style>
-        body {
-            background-color: #0f141c;
-            color: #ffffff;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            text-align: center;
-            padding-top: 120px;
-            margin: 0;
-        }
-        h1 {
-            color: #58a6ff;
-            font-size: 3rem;
-            margin-bottom: 5px;
-        }
-        p {
-            color: #8b949e;
-            font-size: 1.2rem;
-            margin-bottom: 40px;
-        }
-        .btn-container {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-        }
-        .custom-btn {
-            background-color: #21262d;
-            color: #58a6ff;
-            border: 1px solid #30363d;
-            padding: 12px 24px;
-            font-size: 1rem;
-            font-weight: bold;
-            border-radius: 6px;
-            cursor: pointer;
-            text-decoration: none;
-            transition: 0.2s ease;
-        }
-        .custom-btn:hover {
-            background-color: #58a6ff;
-            color: #0f141c;
-            border-color: #58a6ff;
-            transform: translateY(-2px);
-        }
-    </style>
-</head>
-<body>
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>Had2p</title> 
+    <!-- This imports the authentic Blackletter font from Google Fonts -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=UnifrakturMaguntia&display=swap" rel="stylesheet">
 
-    
-    <h1>Had2p</h1>
-    <p>Welcome to my stupid website i suck at coding never ask me to code</p>
+    <style> 
+        body { 
+            background-color: #000000; /* Shifted to dark black for a better gothic vibe */
+            color: #ffffff; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            text-align: center; 
+            padding-top: 140px; 
+            margin: 0; 
+        } 
+        
+        /* This applies the Blackletter gothic font to your main title */
+        h1 { 
+            font-family: 'UnifrakturMaguntia', serif;
+            color: #ffffff; 
+            font-size: 5.5rem; /* Made it larger so the details show up beautifully */
+            font-weight: normal;
+            margin-bottom: 20px; 
+            text-shadow: 0px 0px 12px rgba(255, 255, 255, 0.1);
+        } 
+        
+        p { 
+            color: #8b949e; 
+            font-size: 1.2rem; 
+            margin-bottom: 45px; 
+        } 
+        
+        .btn-container { 
+            display: flex; 
+            justify-content: center; 
+            gap: 15px; 
+        } 
+        
+        .custom-btn { 
+            background-color: #111111; 
+            color: #888888; 
+            border: 1px solid #222222; 
+            padding: 12px 24px; 
+            font-size: 1rem; 
+            font-weight: bold; 
+            border-radius: 6px; 
+            cursor: pointer; 
+            text-decoration: none; 
+            transition: 0.2s ease; 
+        } 
+        
+        /* The buttons turn white and text turns black on hover */
+        .custom-btn:hover { 
+            background-color: #ffffff; 
+            color: #000000; 
+            border-color: #ffffff; 
+            transform: translateY(-2px); 
+        } 
+    </style> 
+</head> 
+<body> 
 
-    <div class="btn-container">
-        <!-- This button links directly to your Steam community profile -->
-        <a href="https://steamcommunity.com/id/had2p/" target="_blank" class="custom-btn">My Steam profile</a>
-        <a href="https://github.com" target="_blank" class="custom-btn">GitHub Profile</a>
-    </div>
+    <h1>Had2p</h1> 
+    <p>Welcome to my stupid website i suck at coding never ask me to code</p> 
 
-</body>
+    <div class="btn-container"> 
+        <a href="https://steamcommunity.com/id/had2p/" target="_blank" class="custom-btn">My Steam profile</a> 
+        <a href="https://github.com" target="_blank" class="custom-btn">GitHub Profile</a> 
+    </div> 
+
+</body> 
 </html>

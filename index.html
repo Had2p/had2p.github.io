@@ -2,10 +2,15 @@
 <html> 
 <head> 
     <title>𝕳𝖆𝖉2𝖕</title> 
+    
+    <!-- This imports the authentic Blackletter font from Google Fonts -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=UnifrakturMaguntia&display=swap" rel="stylesheet">
 
     <style> 
         body { 
-            background-color: #000000; /* Shifted to dark black for a better gothic vibe */
+            background-color: #000000; /* Shifted to dark black for a better gothic vibe */ 
             color: #ffffff; 
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
             text-align: center; 
@@ -13,20 +18,37 @@
             margin: 0; 
         } 
         
-        /* This applies the Blackletter gothic font to your main title */
+        /* This applies the Blackletter gothic font to your main title */ 
         h1 { 
-            font-family: 'UnifrakturMaguntia', serif;
+            font-family: 'UnifrakturMaguntia', serif; 
             color: #ffffff; 
-            font-size: 5.5rem; /* Made it larger so the details show up beautifully */
-            font-weight: normal;
+            font-size: 5.5rem; /* Made it larger so the details show up beautifully */ 
+            font-weight: normal; 
             margin-bottom: 20px; 
-            text-shadow: 0px 0px 12px rgba(255, 255, 255, 0.1);
+            text-shadow: 0px 0px 12px rgba(255, 255, 255, 0.1); 
         } 
         
         p { 
             color: #8b949e; 
             font-size: 1.2rem; 
+            margin-bottom: 35px; 
+        } 
+        
+        .steam-banner-container { 
             margin-bottom: 45px; 
+        } 
+        
+        .steam-banner-container img { 
+            border: 1px solid #222222; 
+            border-radius: 4px; 
+            max-width: 100%; 
+            height: auto; 
+            transition: transform 0.2s ease, border-color 0.2s ease; 
+        } 
+        
+        .steam-banner-container img:hover { 
+            transform: scale(1.02); 
+            border-color: #66c0f4; 
         } 
         
         .btn-container { 
@@ -48,7 +70,7 @@
             transition: 0.2s ease; 
         } 
         
-        /* The buttons turn white and text turns black on hover */
+        /* The buttons turn white and text turns black on hover */ 
         .custom-btn:hover { 
             background-color: #ffffff; 
             color: #000000; 
@@ -62,8 +84,16 @@
     <h1>𝕳𝖆𝖉2𝖕</h1> 
     <p>Welcome to my stupid website i suck at coding never ask me to code</p> 
 
+    <!-- Your custom dynamic Steam banner card -->
+    <div class="steam-banner-container"> 
+        <a href="https://steamprofile.com" target="_blank"> 
+            <img src="https://steamprofile.com" alt="Had2p Steam Signature"/> 
+        </a> 
+    </div> 
+
+    <!-- Navigation profile buttons below the banner -->
     <div class="btn-container"> 
-        <a href="https://steamcommunity.com/id/had2p/" target="_blank" class="custom-btn">My Steam profile</a> 
+        <a href="https://steamcommunity.com" target="_blank" class="custom-btn">My Steam profile</a> 
         <a href="https://github.com" target="_blank" class="custom-btn">GitHub Profile</a> 
     </div> 
 

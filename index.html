@@ -1,19 +1,62 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Had2p's Website</title>
+    <title>Had2p's Official Website</title>
     <style>
         body {
-            background-color: #121212;
+            background-color: #0f141c;
             color: #ffffff;
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             text-align: center;
-            padding-top: 100px;
+            padding-top: 120px;
+            margin: 0;
+        }
+        h1 {
+            color: #58a6ff;
+            font-size: 3rem;
+            margin-bottom: 5px;
+        }
+        p {
+            color: #8b949e;
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+        }
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        .custom-btn {
+            background-color: #21262d;
+            color: #58a6ff;
+            border: 1px solid #30363d;
+            padding: 12px 24px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: 0.2s ease;
+        }
+        .custom-btn:hover {
+            background-color: #58a6ff;
+            color: #0f141c;
+            border-color: #58a6ff;
+            transform: translateY(-2px);
         }
     </style>
 </head>
 <body>
-    <h1>Welcome to My Website</h1>
-    <p>I just successfully changed the design!</p>
+
+    <!-- This updates the main heading at the top -->
+    <h1>Had2p</h1>
+    <p>Welcome back to coding! Check out my links below.</p>
+
+    <div class="btn-container">
+        <!-- This button links directly to your Steam community profile -->
+        <a href="https://steamcommunity.com/id/had2p/" target="_blank" class="custom-btn">Steam Profile</a>
+        <a href="https://github.com" target="_blank" class="custom-btn">GitHub Profile</a>
+    </div>
+
 </body>
 </html>

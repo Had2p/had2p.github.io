@@ -3,13 +3,14 @@
 <head> 
     <title>𝕳𝖆𝖉2𝖕</title> 
     
+    <!-- This imports the authentic Blackletter font from Google Fonts -->
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com/css2?family=UnifrakturMaguntia&display=swap" rel="stylesheet">
 
     <style> 
         body { 
-            background-color: #000000; 
+            background-color: #000000; /* Dark black for a solid gothic vibe */ 
             color: #ffffff; 
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
             text-align: center; 
@@ -17,6 +18,7 @@
             margin: 0; 
         } 
         
+        /* This applies the Blackletter gothic font to your main title */ 
         h1 { 
             font-family: 'UnifrakturMaguntia', serif; 
             color: #ffffff; 
@@ -29,48 +31,30 @@
         p { 
             color: #8b949e; 
             font-size: 1.2rem; 
-            margin-bottom: 35px; 
-        } 
-        
-        /* Centering container for your Shields.io badge */
-        .badge-container { 
             margin-bottom: 45px; 
         } 
         
-        .badge-container img { 
-            height: 28px; /* Perfectly scales the badge on your page */
-            transition: transform 0.2s ease; 
-        } 
-        
-        .badge-container img:hover { 
-            transform: scale(1.08); 
-        } 
-        
+        /* Container to style your modern Shields.io button links */ 
         .btn-container { 
             display: flex; 
             justify-content: center; 
-            gap: 15px; 
+            gap: 20px; 
         } 
         
-        .custom-btn { 
-            background-color: #111111; 
-            color: #888888; 
-            border: 1px solid #222222; 
-            padding: 12px 24px; 
-            font-size: 1rem; 
-            font-weight: bold; 
-            border-radius: 6px; 
-            cursor: pointer; 
-            text-decoration: none; 
-            transition: 0.2s ease; 
-        } 
-        
-        .custom-btn:hover { 
-            background-color: #ffffff; 
-            color: #000000; 
-            border-color: #ffffff; 
-            transform: translateY(-2px); 
-        } 
+        .badge-link {
+            text-decoration: none;
+            transition: transform 0.2s ease;
+        }
+
+        /* Adds a nice hover action when you move your cursor over the badges */
+        .badge-link:hover {
+            transform: scale(1.08) translateY(-2px);
+        }
+
+        .badge-link img {
+            height: 40px; /* Makes the badges large and clear to read */
+            border-radius: 4px;
+        }
     </style> 
 </head> 
 <body> 
@@ -78,16 +62,17 @@
     <h1>𝕳𝖆𝖉2𝖕</h1> 
     <p>Welcome to my stupid website i suck at coding never ask me to code</p> 
 
-    <!-- Your converted Shields.io badge linking directly to your Steam profile -->
-    <div class="badge-container"> 
-        <a href="https://steamcommunity.com" target="_blank"> 
-            <img src="https://shields.io" alt="Steam Profile Badge"/> 
-        </a> 
-    </div> 
-
+    <!-- Navigation profile area using only high-quality Shields.io badges -->
     <div class="btn-container"> 
-        <a href="https://steamcommunity.com" target="_blank" class="custom-btn">My Steam profile</a> 
-        <a href="https://github.com" target="_blank" class="custom-btn">GitHub Profile</a> 
+        <!-- Your custom Steam profile badge button -->
+        <a href="https://steamcommunity.com/id/had2p/" target="_blank" class="badge-link">
+            <img src="https://shields.io" alt="Steam Profile"/>
+        </a>
+
+        <!-- Matching GitHub profile badge button -->
+        <a href="https://github.com" target="_blank" class="badge-link">
+            <img src="https://shields.io" alt="GitHub Profile"/>
+        </a>
     </div> 
 
 </body> 

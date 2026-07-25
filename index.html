@@ -1,7 +1,7 @@
 <!DOCTYPE html> 
 <html> 
 <head> 
-    <title>𝕳𝖆𝖉2𝖕</title> 
+    <title>Had2p</title> 
     <style> 
         body { 
             background-color: #000000; 
@@ -21,12 +21,40 @@
             font-size: 1.2rem; 
             margin-bottom: 45px; 
         } 
+        .btn-container { 
+            display: flex; 
+            justify-content: center; 
+            gap: 20px; 
+        } 
+        .badge-link { 
+            text-decoration: none; 
+            transition: transform 0.2s ease; 
+        } 
+        .badge-link:hover { 
+            transform: scale(1.08) translateY(-2px); 
+        } 
+        .badge-link img { 
+            height: 40px; 
+            border-radius: 4px; 
+        } 
     </style> 
 </head> 
 <body> 
 
-    <h1>𝕳𝕬𝕯2𝕻</h1> 
+    <h1>HAD2P</h1> 
     <p>Welcome to my stupid website i suck at coding never ask me to code</p> 
+
+    <div class="btn-container"> 
+        <!-- Steam Profile Plastic Badge --> 
+        <a href="https://steamcommunity.com/id/had2p/" target="_blank" class="badge-link"> 
+            <img alt="Static Badge" src="https://img.shields.io/badge/Steam-2A475E?style=plastic&logo=Steam&logoColor=white"> 
+        </a> 
+
+        <!-- GitHub Profile Plastic Badge with the double bracket fixed --> 
+        <a href="https://github.com/Had2p" target="_blank" class="badge-link"> 
+            <img alt="Static Badge" src="https://img.shields.io/badge/Github-000000?style=plastic&logo=Github"> 
+        </a> 
+    </div> 
 
 </body> 
 </html>

@@ -7,26 +7,67 @@
             background-color: #000000; 
             color: #ffffff; 
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            text-align: center; 
-            padding-top: 140px; 
             margin: 0; 
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         } 
+
+        /* This creates the single column layout right in the middle of the screen */
+        .main-column {
+            max-width: 600px;
+            width: 100%;
+            padding: 40px 20px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        
+        /* Added a deep red shadow glow to match the blood splatter vibe in the image */
         h1 { 
             font-size: 5.5rem; 
             font-weight: normal; 
-            margin-bottom: 20px; 
+            margin: 0 0 20px 0; 
+            letter-spacing: 2px;
+            text-shadow: 0 0 15px #880000, 0 0 30px #550000;
         } 
+        
         p { 
             color: #8b949e; 
             font-size: 1.2rem; 
-            margin-bottom: 45px; 
+            margin: 0 0 40px 0; 
+            line-height: 1.6;
         } 
+
+        .page-link {
+            display: inline-block;
+            color: #ffffff;
+            font-size: 1.1rem;
+            text-decoration: none;
+            font-weight: bold;
+            border: 1px solid #333333;
+            padding: 10px 20px;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+        }
+
+        .page-link:hover {
+            background-color: #880000;
+            border-color: #880000;
+            text-shadow: 0 0 8px #ffffff;
+            box-shadow: 0 0 15px rgba(136, 0, 0, 0.4);
+        }
     </style> 
 </head> 
 <body> 
 
-    <h1>HAD2P</h1> 
-    <p>Welcome to my stupid website i suck at coding never ask me to code</p> 
+    <!-- Everything sits inside this centered column box -->
+    <div class="main-column">
+        <h1>HAD2P</h1> 
+        <p>Welcome to my stupid website i suck at coding never ask me to code</p> 
+        <a href="buttons.html" class="page-link">View My Profiles</a>
+    </div>
 
 </body> 
 </html>

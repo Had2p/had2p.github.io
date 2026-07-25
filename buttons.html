@@ -34,6 +34,7 @@
             text-decoration: none;
             transition: transform 0.2s ease, filter 0.2s ease;
             display: inline-block;
+            position: relative;
         }
 
         .badge-link:hover {
@@ -66,6 +67,8 @@
             pointer-events: none;
             transition: opacity 0.2s ease;
             top: -35px;
+            left: 50%;
+            transform: translateX(-50%);
         }
 
         .badge-link:hover[data-text]::after {

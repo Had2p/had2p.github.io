@@ -10,10 +10,9 @@
             text-align: center; 
             padding-top: 140px; 
             margin: 0; 
-            perspective: 1000px; /* Crucial for making the 3D text rotation pop outward */
+            perspective: 1000px; 
         } 
         
-        /* This binds your animation directly to your main name heading */
         h1 { 
             font-size: 5.5rem; 
             font-weight: normal; 
@@ -45,29 +44,28 @@
             border-radius: 4px; 
         } 
 
-        /* Your exact 3D keyframe timeline layout with style tags removed */
         @keyframes tilt3d {
-            0% { transform: rotateX(15deg); }
-            5% { transform: rotateY(15deg); }
-            10% { transform: rotateX(-15deg); }
-            15% { transform: rotateY(-15deg); }
-            20% { transform: rotateX(15deg); }
-            25% { transform: rotateY(15deg); }
-            30% { transform: rotateX(-15deg); }
-            35% { transform: rotateY(-15deg); }
-            40% { transform: rotateX(15deg); }
-            45% { transform: rotateY(15deg); }
-            50% { transform: rotateX(-15deg); }
-            55% { transform: rotateY(-15deg); }
-            60% { transform: rotateX(15deg); }
-            65% { transform: rotateY(15deg); }
-            70% { transform: rotateX(-15deg); }
-            75% { transform: rotateY(-15deg); }
-            80% { transform: rotateX(15deg); }
-            85% { transform: rotateY(15deg); }
-            90% { transform: rotateX(-15deg); }
-            95% { transform: rotateY(-15deg); }
-            100% { transform: rotateX(15deg); }
+            0%   { transform: rotateX(15deg) rotateY(0deg); }
+            5%   { transform: rotateX(0deg) rotateY(15deg); }
+            10%  { transform: rotateX(-15deg) rotateY(0deg); }
+            15%  { transform: rotateX(0deg) rotateY(-15deg); }
+            20%  { transform: rotateX(15deg) rotateY(0deg); }
+            25%  { transform: rotateX(0deg) rotateY(15deg); }
+            30%  { transform: rotateX(-15deg) rotateY(0deg); }
+            35%  { transform: rotateX(0deg) rotateY(-15deg); }
+            40%  { transform: rotateX(15deg) rotateY(0deg); }
+            45%  { transform: rotateX(0deg) rotateY(15deg); }
+            50%  { transform: rotateX(-15deg) rotateY(0deg); }
+            55%  { transform: rotateX(0deg) rotateY(-15deg); }
+            60%  { transform: rotateX(15deg) rotateY(0deg); }
+            65%  { transform: rotateX(0deg) rotateY(15deg); }
+            70%  { transform: rotateX(-15deg) rotateY(0deg); }
+            75%  { transform: rotateX(0deg) rotateY(-15deg); }
+            80%  { transform: rotateX(15deg) rotateY(0deg); }
+            85%  { transform: rotateX(0deg) rotateY(15deg); }
+            90%  { transform: rotateX(-15deg) rotateY(0deg); }
+            95%  { transform: rotateX(0deg) rotateY(-15deg); }
+            100% { transform: rotateX(15deg) rotateY(0deg); }
         }
     </style> 
 </head> 
@@ -77,12 +75,10 @@
     <p>Welcome to my stupid website i suck at coding never ask me to code</p> 
 
     <div class="btn-container"> 
-        <!-- Steam Profile Plastic Badge using your exact configuration link --> 
         <a href="https://steamcommunity.com" target="_blank" class="badge-link"> 
             <img alt="Static Badge" src="https://shields.io"> 
         </a> 
 
-        <!-- Matching style GitHub Profile Badge --> 
         <a href="https://github.com" target="_blank" class="badge-link"> 
             <img alt="Static Badge" src="https://shields.io"> 
         </a> 
@@ -90,4 +86,5 @@
 
 </body> 
 </html>
+
 

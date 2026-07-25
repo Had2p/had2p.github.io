@@ -12,10 +12,9 @@
             text-align: center; 
             padding-top: 140px; 
             margin: 0; 
-            perspective: 1000px; 
             min-height: 100vh;
             overflow-x: hidden;
-            animation: resizeBg 12s infinite ease-in-out;
+            animation: liquidStretch 10s infinite ease-in-out;
         } 
         
         h1 { 
@@ -27,8 +26,6 @@
             font-weight: normal; 
             margin-bottom: 20px; 
             display: inline-block;
-            animation: tilt3d 10s infinite linear; 
-            transform-style: preserve-3d;
         } 
         
         p { 
@@ -66,51 +63,27 @@
             border-radius: 4px; 
         } 
 
-        @keyframes resizeBg {
+        @keyframes liquidStretch {
             0% {
                 background-size: 100% 100%;
                 transform: skew(0deg, 0deg);
             }
             25% {
-                background-size: 100% 200%;
+                background-size: 100% 250%;
                 transform: skew(0deg, 0deg);
             }
             50% {
-                background-size: 200% 200%;
-                transform: skew(10deg, 10deg);
+                background-size: 250% 100%;
+                transform: skew(0deg, 0deg);
             }
             75% {
-                background-size: 100% 200%;
-                transform: skew(0deg, 0deg);
+                background-size: 180% 180%;
+                transform: skew(12deg, 12deg);
             }
             100% {
                 background-size: 100% 100%;
                 transform: skew(0deg, 0deg);
             }
-        }
-
-        @keyframes tilt3d {
-            0% { transform: rotateX(15deg) rotateY(0deg); }
-            5% { transform: rotateX(0deg) rotateY(15deg); }
-            10% { transform: rotateX(-15deg) rotateY(0deg); }
-            15% { transform: rotateX(0deg) rotateY(-15deg); }
-            20% { transform: rotateX(15deg) rotateY(0deg); }
-            25% { transform: rotateX(0deg) rotateY(15deg); }
-            30% { transform: rotateX(-15deg) rotateY(0deg); }
-            35% { transform: rotateX(0deg) rotateY(-15deg); }
-            40% { transform: rotateX(15deg) rotateY(0deg); }
-            45% { transform: rotateX(0deg) rotateY(15deg); }
-            50% { transform: rotateX(-15deg) rotateY(0deg); }
-            55% { transform: rotateX(0deg) rotateY(-15deg); }
-            60% { transform: rotateX(15deg) rotateY(0deg); }
-            65% { transform: rotateX(0deg) rotateY(15deg); }
-            70% { transform: rotateX(-15deg) rotateY(0deg); }
-            75% { transform: rotateX(0deg) rotateY(-15deg); }
-            80% { transform: rotateX(15deg) rotateY(0deg); }
-            85% { transform: rotateX(0deg) rotateY(15deg); }
-            90% { transform: rotateX(-15deg) rotateY(0deg); }
-            95% { transform: rotateX(0deg) rotateY(-15deg); }
-            100% { transform: rotateX(15deg) rotateY(0deg); }
         }
     </style> 
 </head> 

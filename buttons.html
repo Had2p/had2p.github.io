@@ -1,39 +1,99 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buttons - 𝕳𝖆𝖉2𝖕</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             background-color: #000000;
-            padding-top: 20px;
+            padding: 40px 20px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        .btn-container { 
-            display: flex; 
-            justify-content: center; 
-            gap: 20px; 
-        } 
-        .badge-link { 
-            text-decoration: none; 
-            transition: transform 0.2s ease; 
-        } 
-        .badge-link:hover { 
-            transform: scale(1.08) translateY(-2px); 
-        } 
-        .badge-link img { 
-            height: 40px; 
-            border-radius: 4px; 
+
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            max-width: 600px;
+        }
+
+        .badge-link {
+            text-decoration: none;
+            transition: transform 0.2s ease, filter 0.2s ease;
+            display: inline-block;
+        }
+
+        .badge-link:hover {
+            transform: scale(1.08) translateY(-2px);
+            filter: drop-shadow(0 4px 12px rgba(255, 255, 255, 0.2));
+        }
+
+        .badge-link:active {
+            transform: scale(0.98) translateY(0px);
+        }
+
+        .badge-link img {
+            height: 40px;
+            display: block;
+            border-radius: 4px;
+            max-width: 100%;
+        }
+
+        /* Fallback styling if images don't load */
+        .badge-link[data-text]::after {
+            content: attr(data-text);
+            position: absolute;
+            background: #1a1a1a;
+            color: #ffffff;
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.2s ease;
+            top: -35px;
+        }
+
+        .badge-link:hover[data-text]::after {
+            opacity: 1;
         }
     </style>
 </head>
 <body>
-    <div class="btn-container"> 
-        <a href="https://steamcommunity.com/id/had2p/" target="_blank" class="badge-link"> 
-            <img alt="Static Badge" src="https://img.shields.io/badge/Steam-2A475E?style=plastic&logo=Steam&logoColor=white"> 
-        </a> 
+    <div class="btn-container">
+        <a href="https://steamcommunity.com/id/had2p/" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           class="badge-link" 
+           data-text="Steam">
+            <img alt="Steam Badge" 
+                 src="https://img.shields.io/badge/Steam-2A475E?style=plastic&logo=Steam&logoColor=white"
+                 loading="lazy">
+        </a>
 
-        <a href="https://github.com/Had2p" target="_blank" class="badge-link"> 
-            <img alt="Static Badge" src="https://img.shields.io/badge/Github-000000?style=plastic&logo=Github"> 
-        </a> 
+        <a href="https://github.com/Had2p" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           class="badge-link" 
+           data-text="GitHub">
+            <img alt="GitHub Badge" 
+                 src="https://img.shields.io/badge/Github-000000?style=plastic&logo=Github&logoColor=white"
+                 loading="lazy">
+        </a>
     </div>
 </body>
 </html>

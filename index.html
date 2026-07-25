@@ -4,9 +4,9 @@
     <title>Had2p</title> 
     <style> 
         body { 
-            background-color: #000000; 
-            color: #ffffff; 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background-color: #3b8ea5; 
+            color: #000000; 
+            font-family: 'Tahoma', 'Segoe UI', Geneva, Verdana, sans-serif; 
             margin: 0; 
             padding: 0;
             display: flex;
@@ -15,58 +15,107 @@
             min-height: 100vh;
         } 
 
-        /* This creates the single column layout right in the middle of the screen */
-        .main-column {
-            max-width: 600px;
-            width: 100%;
-            padding: 40px 20px;
-            box-sizing: border-box;
+        .win98-window {
+            background-color: #bfbfbf;
+            width: 500px;
+            border-top: 2px solid #ffffff;
+            border-left: 2px solid #ffffff;
+            border-right: 2px solid #808080;
+            border-bottom: 2px solid #808080;
+            box-shadow: 1px 1px 0px #000000;
+            padding: 3px;
+        }
+
+        .title-bar {
+            background: linear-gradient(90deg, #000080, #1084d0);
+            color: #ffffff;
+            padding: 4px 6px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .title-bar-controls button {
+            background-color: #bfbfbf;
+            border-top: 1px solid #ffffff;
+            border-left: 1px solid #ffffff;
+            border-right: 1px solid #808080;
+            border-bottom: 1px solid #808080;
+            font-size: 0.75rem;
+            font-weight: bold;
+            width: 16px;
+            height: 14px;
+            padding: 0;
+            cursor: pointer;
+        }
+
+        .window-body {
+            background-color: #ffffff;
+            margin: 10px;
+            padding: 30px 20px;
+            border-top: 2px solid #808080;
+            border-left: 2px solid #808080;
+            border-right: 2px solid #ffffff;
+            border-bottom: 2px solid #ffffff;
             text-align: center;
         }
         
-        /* Added a deep red shadow glow to match the blood splatter vibe in the image */
         h1 { 
-            font-size: 5.5rem; 
-            font-weight: normal; 
-            margin: 0 0 20px 0; 
-            letter-spacing: 2px;
-            text-shadow: 0 0 15px #880000, 0 0 30px #550000;
+            font-size: 3.5rem; 
+            font-weight: bold; 
+            margin: 0 0 15px 0; 
+            color: #000000;
+            text-shadow: none;
         } 
         
         p { 
-            color: #8b949e; 
-            font-size: 1.2rem; 
-            margin: 0 0 40px 0; 
-            line-height: 1.6;
+            color: #000000; 
+            font-size: 1rem; 
+            margin: 0 0 30px 0; 
+            line-height: 1.4;
         } 
 
-        .page-link {
+        .win98-btn {
             display: inline-block;
-            color: #ffffff;
-            font-size: 1.1rem;
+            background-color: #bfbfbf;
+            color: #000000;
+            font-size: 0.9rem;
             text-decoration: none;
-            font-weight: bold;
-            border: 1px solid #333333;
-            padding: 10px 20px;
-            border-radius: 4px;
-            transition: all 0.2s ease;
+            padding: 6px 20px;
+            border-top: 2px solid #ffffff;
+            border-left: 2px solid #ffffff;
+            border-right: 2px solid #808080;
+            border-bottom: 2px solid #808080;
         }
 
-        .page-link:hover {
-            background-color: #880000;
-            border-color: #880000;
-            text-shadow: 0 0 8px #ffffff;
-            box-shadow: 0 0 15px rgba(136, 0, 0, 0.4);
+        .win98-btn:active {
+            border-top: 2px solid #808080;
+            border-left: 2px solid #808080;
+            border-right: 2px solid #ffffff;
+            border-bottom: 2px solid #ffffff;
+            padding: 7px 19px 5px 21px;
         }
     </style> 
 </head> 
 <body> 
 
-    <!-- Everything sits inside this centered column box -->
-    <div class="main-column">
-        <h1>HAD2P</h1> 
-        <p>Welcome to my stupid website i suck at coding never ask me to code</p> 
-        <a href="buttons.html" class="page-link">View My Profiles</a>
+    <div class="win98-window">
+        <div class="title-bar">
+            <span>untitled - Paint</span>
+            <div class="title-bar-controls">
+                <button>_</button>
+                <button>&#9633;</button>
+                <button>X</button>
+            </div>
+        </div>
+        <div class="window-body">
+            <h1>HAD2P</h1> 
+            <p>Welcome to my stupid website i suck at coding never ask me to code</p> 
+            <a href="buttons.html" class="win98-btn">OK</a>
+        </div>
     </div>
 
 </body> 

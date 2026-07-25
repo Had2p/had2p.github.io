@@ -10,15 +10,16 @@
             text-align: center; 
             padding-top: 140px; 
             margin: 0; 
-            perspective: 1000px; /* Essential for your 3D text tilting effect */
+            perspective: 1000px; /* Crucial for making the 3D text rotation pop outward */
         } 
         
+        /* This binds your animation directly to your main name heading */
         h1 { 
             font-size: 5.5rem; 
             font-weight: normal; 
             margin-bottom: 20px; 
             display: inline-block;
-            animation: tilt3d 8s infinite ease-in-out; /* Binds your 3D animation below */
+            animation: tilt3d 10s infinite linear; 
             transform-style: preserve-3d;
         } 
         
@@ -44,7 +45,7 @@
             border-radius: 4px; 
         } 
 
-        /* Your exact 3D rotation timeline with syntax errors removed */
+        /* Your exact 3D keyframe timeline layout with style tags removed */
         @keyframes tilt3d {
             0% { transform: rotateX(15deg); }
             5% { transform: rotateY(15deg); }
@@ -76,12 +77,12 @@
     <p>Welcome to my stupid website i suck at coding never ask me to code</p> 
 
     <div class="btn-container"> 
-        <!-- Steam Profile Plastic Badge --> 
+        <!-- Steam Profile Plastic Badge using your exact configuration link --> 
         <a href="https://steamcommunity.com" target="_blank" class="badge-link"> 
             <img alt="Static Badge" src="https://shields.io"> 
         </a> 
 
-        <!-- GitHub Profile Plastic Badge (Fixed the URL path capitalization error) --> 
+        <!-- Matching style GitHub Profile Badge --> 
         <a href="https://github.com" target="_blank" class="badge-link"> 
             <img alt="Static Badge" src="https://shields.io"> 
         </a> 
@@ -89,3 +90,4 @@
 
 </body> 
 </html>
+

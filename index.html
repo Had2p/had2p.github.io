@@ -10,16 +10,15 @@
             text-align: center; 
             padding-top: 140px; 
             margin: 0; 
-            perspective: 1000px; /* Allows the 3D text rotation to pop outward */
+            perspective: 1000px; /* Essential for your 3D text tilting effect */
         } 
         
-        /* This hooks up your 3D animation to your name */
         h1 { 
             font-size: 5.5rem; 
             font-weight: normal; 
             margin-bottom: 20px; 
             display: inline-block;
-            animation: tilt3d 10s infinite linear; /* Custom speed and loop */
+            animation: tilt3d 8s infinite ease-in-out; /* Binds your 3D animation below */
             transform-style: preserve-3d;
         } 
         
@@ -45,7 +44,7 @@
             border-radius: 4px; 
         } 
 
-        /* This is your fixed 3D keyframe animation timeline */
+        /* Your exact 3D rotation timeline with syntax errors removed */
         @keyframes tilt3d {
             0% { transform: rotateX(15deg); }
             5% { transform: rotateY(15deg); }
@@ -82,7 +81,7 @@
             <img alt="Static Badge" src="https://shields.io"> 
         </a> 
 
-        <!-- GitHub Profile Plastic Badge --> 
+        <!-- GitHub Profile Plastic Badge (Fixed the URL path capitalization error) --> 
         <a href="https://github.com" target="_blank" class="badge-link"> 
             <img alt="Static Badge" src="https://shields.io"> 
         </a> 

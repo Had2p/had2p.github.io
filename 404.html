@@ -11,30 +11,57 @@
             overflow: hidden;
             position: relative;
         } 
+        .bouncing-link {
+            position: absolute;
+            display: block;
+            width: 150px;
+            height: 150px;
+            text-decoration: none;
+        }
         .bouncing-img { 
             width: 150px;
             height: 150px;
             object-fit: contain;
-            position: absolute;
-            will-change: transform;
-        } 
+            cursor: pointer;
+            transition: filter 0.2s ease;
+        }
+        .bouncing-img:hover {
+            filter: brightness(1.2);
+        }
+        .error-text {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: -1;
+        }
     </style> 
 </head> 
 <body> 
 
-    <img class="bouncing-img" src="stuff/images/image.png" alt="Bouncing Target">
-    <img class="bouncing-img" src="stuff/images/image.png" alt="Bouncing Target">
-    <img class="bouncing-img" src="stuff/images/image.png" alt="Bouncing Target">
-    <img class="bouncing-img" src="stuff/images/image.png" alt="Bouncing Target">
-    <img class="bouncing-img" src="stuff/images/image.png" alt="Bouncing Target">
+    <a href="stuff/images/image.png" target="_blank" class="bouncing-link">
+        <img class="bouncing-img" src="stuff/images/image.png" alt="Bouncing Target">
+    </a>
+    <a href="stuff/images/image.png" target="_blank" class="bouncing-link">
+        <img class="bouncing-img" src="stuff/images/image.png" alt="Bouncing Target">
+    </a>
+    <a href="stuff/images/image.png" target="_blank" class="bouncing-link">
+        <img class="bouncing-img" src="stuff/images/image.png" alt="Bouncing Target">
+    </a>
+    <a href="stuff/images/image.png" target="_blank" class="bouncing-link">
+        <img class="bouncing-img" src="stuff/images/image.png" alt="Bouncing Target">
+    </a>
+    <a href="stuff/images/image.png" target="_blank" class="bouncing-link">
+        <img class="bouncing-img" src="stuff/images/image.png" alt="Bouncing Target">
+    </a>
 
     <script>
-        const images = document.querySelectorAll('.bouncing-img');
+        const links = document.querySelectorAll('.bouncing-link');
         const imgData = [];
 
-        images.forEach((img, index) => {
+        links.forEach((link, index) => {
             imgData.push({
-                element: img,
+                link: link,
                 x: Math.random() * (window.innerWidth - 150),
                 y: Math.random() * (window.innerHeight - 150),
                 speedX: (index === 0 ? 3 : -3) * (Math.random() * 0.5 + 0.8),
@@ -48,27 +75,27 @@
             const screenWidth = window.innerWidth;
             const screenHeight = window.innerHeight;
 
-            imgData.forEach(img => {
-                img.x += img.speedX;
-                img.y += img.speedY;
+            imgData.forEach(obj => {
+                obj.x += obj.speedX;
+                obj.y += obj.speedY;
 
-                if (img.x <= 0) {
-                    img.x = 0;
-                    img.speedX *= -1;
-                } else if (img.x + img.width >= screenWidth) {
-                    img.x = screenWidth - img.width;
-                    img.speedX *= -1;
+                if (obj.x <= 0) {
+                    obj.x = 0;
+                    obj.speedX *= -1;
+                } else if (obj.x + obj.width >= screenWidth) {
+                    obj.x = screenWidth - obj.width;
+                    obj.speedX *= -1;
                 }
 
-                if (img.y <= 0) {
-                    img.y = 0;
-                    img.speedY *= -1;
-                } else if (img.y + img.height >= screenHeight) {
-                    img.y = screenHeight - img.height;
-                    img.speedY *= -1;
+                if (obj.y <= 0) {
+                    obj.y = 0;
+                    obj.speedY *= -1;
+                } else if (obj.y + obj.height >= screenHeight) {
+                    obj.y = screenHeight - obj.height;
+                    obj.speedY *= -1;
                 }
 
-                img.element.style.transform = `translate3d(${img.x}px, ${img.y}px, 0px)`;
+                obj.link.style.transform = `translate3d(${obj.x}px, ${obj.y}px, 0px)`;
             });
 
             requestAnimationFrame(updateBounce);
@@ -77,15 +104,14 @@
         requestAnimationFrame(updateBounce);
 
         window.addEventListener('resize', () => {
-            imgData.forEach(img => {
-                if (img.x + img.width > window.innerWidth) img.x = window.innerWidth - img.width;
-                if (img.y + img.height > window.innerHeight) img.y = window.innerHeight - img.height;
+            imgData.forEach(obj => {
+                if (obj.x + obj.width > window.innerWidth) obj.x = window.innerWidth - obj.width;
+                if (obj.y + obj.height > window.innerHeight) obj.y = window.innerHeight - obj.height;
             });
         });
     </script>
 
+    <h1 class="error-text" style="font-size:20px;color:red;text-align: center;word-wrap: break-word;">404 not found</h1>
+
 </body> 
 </html>
-
-<h1 style="font-size:20;color:red;text-align: center;word-wrap: break-word;">404 not found
-<h1 style="font-size:20;color:red;text-align: center;word-wrap: break-word;">404 not found

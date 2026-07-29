@@ -1,19 +1,68 @@
-<!DOCTYPE html> 
-<html> 
-<head> 
-    <title>Had404p</title> 
-    <style> 
-        body { 
-            background-color: #000000; 
-            margin: 0; 
-            width: 100vw;
-            height: 100vh;
-            overflow: hidden;
-            position: relative;
-</script>
-<h1 style="font-size:20;color:red;text-align: center;word-wrap: break-word;">404 not found</h1>
-<h1 style="font-size:20;color:red;text-align: center;word-wrap: break-word;">404 not found</h1>
-<a href="index.html" style="text-decoration: none; color: black;"><h1 style="font-size:10;color:lime;text-align: center;word-wrap: break-word;">Go to the main page!</h1></a>
-<a href="https://github.com/Had2p" style="text-decoration: none; color: black;"><h1 style="font-size:10;color:lime;text-align: center;word-wrap: break-word;">My Github page!</h1></a>
-<a href="https://steamcommunity.com/id/had2p" style="text-decoration: none; color: black;"><h1 style="font-size:10;color:lime;text-align: center;word-wrap: break-word;">My Steam account!</h1></a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>404 — Had2p</title>
+  <style>
+    :root{--bg:#000;--accent:lime;--danger:#f00;--muted:#0f0}
+    html,body{height:100%;}
+    body {
+      background-color: var(--bg);
+      color: var(--muted);
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+    h1{color:var(--danger);font-size:48px;margin:0.25rem;text-align:center}
+    p{margin:0.25rem 0;color:var(--muted)}
+    nav{margin-top:0.5rem}
+    a{color:var(--accent);text-decoration:none;margin:0 0.5rem}
+    a:hover{text-decoration:underline}
+  </style>
+</head>
+<body>
+  <h1>404 — Not Found</h1>
+  <p>The page you requested could not be found.</p>
+  <nav>
+    <a href="index.html">Go to the main page</a>
+    <a href="https://github.com/Had2p" target="_blank" rel="noopener">My GitHub page</a>
+    <a href="https://steamcommunity.com/id/had2p" target="_blank" rel="noopener">My Steam account</a>
+  </nav>
 
+  <script>
+    // Redirect to the homepage after a short countdown (accessible, cancelable by the user)
+    (function () {
+      var countdown = 7; // seconds
+      var status = document.createElement('p');
+      status.style.marginTop = '0.75rem';
+      status.style.color = 'var(--muted)';
+      status.id = 'redirect-status';
+      status.textContent = 'Redirecting to homepage in ' + countdown + ' seconds...';
+      document.body.appendChild(status);
+
+      var timer = setInterval(function () {
+        countdown -= 1;
+        if (countdown <= 0) {
+          clearInterval(timer);
+          // final navigation
+          window.location.replace('index.html');
+        } else {
+          status.textContent = 'Redirecting to homepage in ' + countdown + ' seconds...';
+        }
+      }, 1000);
+
+      // Make it cancelable: if user clicks anywhere on the page, stop the redirect
+      function cancelRedirect() {
+        clearInterval(timer);
+        status.textContent = 'Redirect canceled. Click "Go to the main page" if you want to navigate.';
+        document.removeEventListener('click', cancelRedirect);
+      }
+      document.addEventListener('click', cancelRedirect);
+    })();
+  </script>
+</body>
+</html>

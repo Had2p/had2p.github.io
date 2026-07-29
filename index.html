@@ -6,7 +6,7 @@
         body { 
             background-color: #000000; 
             color: #ffffff; 
-            font-family: mingliu; 
+            font-family: 'Segoe UI'; 
             text-align: center; 
             padding-top: 140px; 
             margin: 0; 
@@ -14,7 +14,7 @@
             min-height: 100vh;
         } 
         h1 { 
-            font-family: mingliu; 
+            font-family: 'mingliu'; 
             -webkit-font-smoothing: none; 
             -moz-osx-font-smoothing: unset; 
             text-rendering: optimizeSpeed; 
@@ -43,10 +43,16 @@
             gap: 20px; 
             display: inline-flex; 
         } 
+        .badge-link { 
+            text-decoration: none; 
+            transition: transform 0.2s ease; 
+        } 
+        .badge-link:hover { 
+            transform: scale(1.08) translateY(-2px); 
+        } 
         .badge-link img { 
             height: 40px; 
             border-radius: 4px; 
- 
         } 
         @keyframes tilt3d { 
             0% { transform: rotateX(15deg) rotateY(0deg); } 

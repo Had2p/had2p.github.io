@@ -1,3 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Had2p</title>
+    <style>
+        body { 
+            background-color: #000000; 
+            color: #ffffff; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            text-align: center; 
+            padding-top: 140px; 
+            margin: 0; 
+            perspective: 1000px; 
+            min-height: 100vh; 
+        }
+        * { 
+            cursor: url('media/pointer.webp'), auto; 
+            image-rendering: pixelated; 
+            font-family:mingliu; 
+            -webkit-font-smoothing: none; 
+            -moz-osx-font-smoothing: unset; 
+            text-rendering: optimizeSpeed; 
+        }
+        .title-pixel { 
+            font-family: 'MingLiU', 'PMingLiU', serif; 
+            -webkit-font-smoothing: none; 
+            -moz-osx-font-smoothing: unset; 
+            font-smooth: never; 
+            text-rendering: optimizeSpeed; 
+            font-size: 5.5rem; 
+            font-weight: normal; 
+            margin-bottom: 20px; 
+            display: inline-block; 
+            animation: tilt3d 10s infinite linear; 
+            transform-style: preserve-3d; 
+        }
+        p { 
+            color: #ffffff; 
+            font-size: 1.2rem; 
+            margin-bottom: 45px; 
+            display: inline-block; 
+            max-width: 80%; 
+        }
+        .content-box { 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+        }
+        .btn-container { 
+            display: inline-flex; 
+            justify-content: center; 
+            gap: 20px; 
+        }
+        .badge-link { 
+            text-decoration: none; 
+            transition: transform 0.2s ease; 
+        }
+        .badge-link:hover { 
+            transform: scale(1.08) translateY(-2px); 
+        }
+        .badge-link img { 
+            height: 40px; 
+            border-radius: 4px; 
+        }
+        @keyframes tilt3d { 
+            0% { transform: rotateX(15deg) rotateY(0deg); } 
+            5% { transform: rotateX(0deg) rotateY(15deg); } 
+            10% { transform: rotateX(-15deg) rotateY(0deg); } 
+            15% { transform: rotateX(0deg) rotateY(-15deg); } 
+            20% { transform: rotateX(15deg) rotateY(0deg); } 
+            25% { transform: rotateX(0deg) rotateY(15deg); } 
+            30% { transform: rotateX(-15deg) rotateY(0deg); } 
+            35% { transform: rotateX(0deg) rotateY(-15deg); } 
+            40% { transform: rotateX(15deg) rotateY(0deg); } 
+            45% { transform: rotateX(0deg) rotateY(15deg); } 
+            50% { transform: rotateX(-15deg) rotateY(0deg); } 
+            55% { transform: rotateX(0deg) rotateY(-15deg); } 
+            60% { transform: rotateX(15deg) rotateY(0deg); } 
+            65% { transform: rotateX(0deg) rotateY(15deg); } 
+            70% { transform: rotateX(-15deg) rotateY(0deg); } 
+            75% { transform: rotateX(0deg) rotateY(-15deg); } 
+            80% { transform: rotateX(15deg) rotateY(0deg); } 
+            85% { transform: rotateX(0deg) rotateY(15deg); } 
+            90% { transform: rotateX(-15deg) rotateY(0deg); } 
+            95% { transform: rotateX(0deg) rotateY(-15deg); } 
+            100% { transform: rotateX(15deg) rotateY(0deg); } 
+        }
+    </style>
+</head>
+<body>
+    <div class="content-box">
+        <div class="title-pixel">HAD2P</div>
+        <p>Welcome to my stupid website i suck at coding never ask me to code</p>
+        <div class="btn-container">
+            <a href="https://steamcommunity.com/id/had2p/" target="_blank" class="badge-link">
+                <img alt="Static Badge" src="https://img.shields.io/badge/Steam-2A475E?style=plastic&logo=Steam&logoColor=white">
+            </a>
+            <a href="https://github.com/Had2p/" target="_blank" class="badge-link">
+                <img alt="Static Badge" src="https://img.shields.io/badge/Github-000000?style=plastic&logo=Github">
+            </a>
+        </div>
+    </div>
+</body>
+</html>
 <!DOCTYPE html> 
 <html> 
 <head> 
